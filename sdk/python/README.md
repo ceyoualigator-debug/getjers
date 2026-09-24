@@ -61,7 +61,7 @@ print(r.parsed.team, r.parsed.refund, r.parsed.urgency)
 | `cache=True` | an identical request that does not use a subject's memory returns the stored answers without new engine work |
 | `memory={"placebo": True}` | also asks with neutral lines, to show whether the memory worked by its content |
 
-Robust orders, windows and the placebo pass are billed as answers; the `compare` pass is not, and a cache hit is billed like the first call. `usage.answers_billed` says how many.
+You pay for `usage.input_tokens`, the engine's own count; robust orders and windows read more, the `compare` and placebo passes are free, and a cache hit is billed like the first call.
 
 ## Everything else
 

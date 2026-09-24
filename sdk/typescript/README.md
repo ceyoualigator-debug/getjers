@@ -25,7 +25,7 @@ const r = await jers.systemOne("We were charged twice for September again.", {
 r.answers.route.choice;          // typed "billing" | "support" | "other"
 r.answers.refund.noul;           // probability of yes
 r.memory?.without_memory;        // the same call without the memory
-r.usage.answers_billed;          // what this call cost, in answers
+r.usage.input_tokens;            // what you pay for: the tokens the engine read
 ```
 
 `new JersClient({ apiKey, baseUrl, timeoutMs, maxRetries, backoffMs })`: the key falls back to `JERS_API_KEY`,
